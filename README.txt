@@ -7,6 +7,8 @@ keys:
 	space:		pause
 	tab:		reverse
 	up/down:	speed
-	c:			toggle drawing of centroids
-	n:			toggle drawing of centroids-centroid 'neighbor' linkage
-	p:			toggle drawing of centroid polies
+
+	toggle drawing of:
+	c:			 centroids
+	n:			 centroids-centroid 'neighbor' linkage
+	p:			 centroid polies
