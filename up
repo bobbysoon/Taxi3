@@ -6,4 +6,4 @@ git add ./*.txt
 git commit -m "$(date +%s)"
 git remote add origin https://github.com/bobbysoon/Taxi3.git
 git remote -v
-git push origin master
+git push origin master --force
