@@ -3,6 +3,7 @@
 git add up
 git add ./*.py
 git add ./*.txt
+git add ./*.png
 git commit -m "$(date +%s)"
 git remote add origin https://github.com/bobbysoon/Taxi3.git
 git remote -v
