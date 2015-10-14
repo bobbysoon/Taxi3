@@ -6,6 +6,8 @@ from random import random
 from math import *
 from angle import angle
 
+from Seed import *
+
 class Swarm(list):
 	def __init__(self, count):
 		self.speed= 1.0/16.0
