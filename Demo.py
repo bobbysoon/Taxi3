@@ -23,9 +23,10 @@ class Demo:
 		self.sfNVert= SFVert(self.window, Blue)
 		self.view.size=2,2
 		self.view.center=0,0
-		self.drawNeighbors= True
-		self.drawCentroids= True
+		self.drawNeighbors= False
+		self.drawCentroids= False
 		self.drawPolies= True
+		self.wClicked= None
 
 	def draw(self, taxi):
 		self.scale= self.view.size.x/self.window.size.x
@@ -63,6 +64,21 @@ class Demo:
 					elif e.code == sf.Keyboard.C:		self.drawCentroids= not self.drawCentroids
 					elif e.code == sf.Keyboard.N:		self.drawNeighbors= not self.drawNeighbors
 					elif e.code == sf.Keyboard.P:		self.drawPolies= not self.drawPolies
+				elif type(e) is sf.MouseButtonEvent:
+					if e.pressed:
+						self.wClicked= e.position
+						self.centerWhenClicked= self.view.center
+					else:
+						self.wClicked= None
+				elif type(e) is sf.MouseMoveEvent and self.wClicked:
+					offset= (self.wClicked-e.position)*self.scale
+					self.view.center= self.centerWhenClicked+offset
+				elif type(e) is sf.MouseWheelEvent:
+					z= (Z+1)/(Z) if e.delta<0 else (Z)/(Z+1) if e.delta>0 else 1.0
+					p= self.window.map_pixel_to_coords(e.position)
+					self.view.center= p+(self.view.center-p)*z
+					self.view.zoom(z)
+					self.scale*= z
 
 	@property
 	def step(self):

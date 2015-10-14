@@ -7,3 +7,5 @@ git commit -m "$(date +%s)"
 git remote add origin https://github.com/bobbysoon/Taxi3.git
 git remote -v
 git push origin master $1
+
+find . -name "*.pyc" -type f|xargs rm -f

@@ -4,7 +4,7 @@ from Hue import *
 class SFVert:
 	def __init__(self, target, hue):
 		self.target= target
-		self.circ= sf.CircleShape()
+		self.circ= sf.CircleShape(point_count=6)
 		self.circ.outline_color = Hue(hue,a=.25)
 		self.circ.fill_color = Hue(hue,a=.5)
 

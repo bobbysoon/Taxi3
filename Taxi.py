@@ -6,6 +6,7 @@ from Vec2 import Vec2
 
 class Taxi:
 	def __init__(self, centroids):
+		self.centroids= centroids
 		Centroid.centroids= centroids
 
 		Bounds(centroids)

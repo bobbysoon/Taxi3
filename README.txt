@@ -9,6 +9,6 @@ keys:
 	up/down:	speed
 
 	toggle drawing of:
-	c:			 centroids
-	n:			 centroids-centroid 'neighbor' linkage
-	p:			 centroid polies
+	c:		 centroids
+	n:		 centroids-centroid 'neighbor' linkage
+	p:		 centroid polies
