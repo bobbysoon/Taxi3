@@ -7,6 +7,7 @@ from math import *
 from angle import angle
 
 from Seed import *
+Seed()
 
 class Swarm(list):
 	def __init__(self, count):
