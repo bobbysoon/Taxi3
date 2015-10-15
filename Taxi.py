@@ -14,7 +14,10 @@ class Taxi:
 		Border.reset() # starting over each frame
 		Centroid.reset() # starting over each frame
 
+		l=len(Centroid.centroids)
+
 		for n1 in range(1,len(Centroid.centroids)):
+			print '%i/%i'%(n1,l)
 			c1= Centroid.centroids[n1]
 			# dist-sort, & break when c1 in enclosed
 			others= DistSort(c1, [Centroid.centroids[n2] for n2 in range(n1)] )

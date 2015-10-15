@@ -2,8 +2,6 @@ import sfml as sf
 
 from angle import angle
 
-from Hue import *
-
 class SFCentroidOutline(sf.VertexArray):
 	def __init__(self, c):
 		verts= [(angle(c,v),v) for v in c.verts]
@@ -13,7 +11,7 @@ class SFCentroidOutline(sf.VertexArray):
 
 		sf.VertexArray.__init__(self, sf.PrimitiveType.LINES_STRIP, len(verts) )
 
-		col= Hue(Green)
+		col= sf.Color(32,32,32)
 		for i in range(len(verts)):
 			self[i].color=col
 			self[i].position= verts[i]
