@@ -12,3 +12,6 @@ keys:
 	c:		 centroids
 	n:		 centroids-centroid 'neighbor' linkage
 	p:		 centroid polies
+
+
+Working on another version - an optomization I tried on this isn't working.
